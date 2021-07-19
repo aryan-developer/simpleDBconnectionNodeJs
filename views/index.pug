@@ -1,0 +1,12 @@
+html
+    head
+        style *{ transition: all ease .5s ;} body{text-align: center;} div {text-align: center; display:  inline-block; border: 1px solid black; padding: 8px;}
+    body
+        form(method="post" align="center" enctype="application/x-www-form-urlencoded")
+            input(type="text" name="name" placeholder="Artist Name")
+            button Search Artist
+        each val in data
+            div
+                img(src=val.image)
+                h3= val.name
+                br
